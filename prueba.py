@@ -1,10 +1,11 @@
 import pyodbc 
-conneccionVbolsa = pyodbc.connect('Driver={SQL Server};'
-                      'Server=server_name;'
-                      'Database=db_name;'
-                      'Trusted_Connection=yes;')
+conn = pyodbc.connect(Driver='{SQL Server}',
+                      Server='SQL-TEST\SQL-TEST',
+                      Database='VBolsaTest74',
+                      UID='consulta',
+                      PWD='esmeralda130')
 
-cursor = connrccionVBolsa.cursor()
+cursor = conn.cursor()
 cursor.execute('SELECT * FROM db_name.Table')
 
 for row in cursor:

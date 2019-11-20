@@ -6,7 +6,7 @@ conn = pyodbc.connect(Driver='{SQL Server}',
                       PWD='esmeralda130')
 
 cursor = conn.cursor()
-cursor.execute('SELECT * FROM db_name.Table')
+cursor.execute('SELECT * FROM COMITENTES')
 
 for row in cursor:
     print(row)
